@@ -35,12 +35,13 @@ const projects: Project[] = [
 
 const ProjectSection = () => {
     return (
-        <div className='bg-black text-white py-12 px-6 lg:px-24'>
+        <section id='projects'>
+        <div className='bg-black text-white pt-20 px-6 lg:px-24'>
             <h2 className='text-4xl font-normal mb-16 text-center '>My <span className="text-white font-bold ">Projects</span></h2>
             {projects.map((project, index) => (
                 <div
                     key={project.id}
-                    className={`flex flex-col gap-10 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center mb-12 lg:mb-24`}
+                    className={`flex flex-col gap-10 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center mb-12 lg:mb-14`}
                 >
                     <div className='lg:w-1/2 mb-6 lg:mb-0'>
                         <Image
@@ -58,6 +59,7 @@ const ProjectSection = () => {
                 </div>
             ))}
         </div>
+        </section>
     )
 }
 

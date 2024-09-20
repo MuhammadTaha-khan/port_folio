@@ -3,7 +3,8 @@ import aboutimg from '../../../public/aboutimg.png';
 
 const AboutMe: React.FC = () => {
   return (
-    <div className="bg-gray-50 py-12 px-6 lg:px-24">
+    <section id='about'>
+    <div className=" py-20 px-6 lg:px-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Image Section */}
         <div className="flex justify-center">
@@ -38,6 +39,7 @@ const AboutMe: React.FC = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

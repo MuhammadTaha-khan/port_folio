@@ -7,7 +7,7 @@ import { FaFacebook, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 const Hero: React.FC = () => {
   return (
  
-    <section className="flex flex-col md:flex-row items-center justify-evenly px-8 py-16 ">
+    <section className="flex flex-col md:flex-row items-center justify-evenly px-8 pt-20" id='hero'>
       {/* Left Side - Text */}
       <div className="flex flex-col space-y-4 max-w-lg">
         <h1 className="text-5xl font-normal text-black leading-[1.5] gap-10">
