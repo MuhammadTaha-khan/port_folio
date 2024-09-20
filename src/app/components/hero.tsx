@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
           Based in <span className="text-black font-bold">India.</span>
         </h1>
         <p className="text-gray-600 text-sm md:text-base pb-10 pt-5">
-          I'm Evren Shah. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+          I&apos;m Evren Shah. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
         </p>
 
         {/* Social Media Icons */}

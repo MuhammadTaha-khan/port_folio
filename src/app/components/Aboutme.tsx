@@ -23,7 +23,7 @@ const AboutMe: React.FC = () => {
             About <span className="text-black font-bold">Me</span>
           </h1>
           <p className=" mb-3">
-            I'm a passionate, self-proclaimed designer who specializes in full stack development (React.js & Node.js).
+            I&apos;m a passionate, self-proclaimed designer who specializes in full stack development (React.js & Node.js).
             I am very enthusiastic about bringing the technical and visual aspects of digital products to life. User experience,
             pixel-perfect design, and writing clear, readable, highly performant code matters to me.
           </p>

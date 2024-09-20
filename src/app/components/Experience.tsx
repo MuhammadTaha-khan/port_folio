@@ -16,8 +16,6 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   title,
   description,
   dateRange,
-  icon,
-  bgColor
 }) => {
   // Function to dynamically return the correct icon
   const renderIcon = () => {
