@@ -38,17 +38,42 @@ const ContactForm: React.FC = () => {
                     </div>
                     
 
-                  <div className="flex justify-between mt-7">
+                  {/* <div className="flex justify-between mt-7">
                    <button className="shadow bg-black focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded" type="button">
                        Get in Touch
-                   </button>
-                   {/* <div className="flex space-x-4 mt-4 ml-5"> */}
+                   </button>    
                    <a href="#" className="text-gray-700 border-2 border-black p-5 hover:bg-black hover:text-white rounded"><FaFacebookF /></a>
                    <a href="#" className="text-gray-700 border-2 border-black p-5 hover:bg-black hover:text-white rounded"><FaTwitter /></a>
                    <a href="#" className="text-gray-700 border-2 border-black p-5 hover:bg-black hover:text-white rounded"><FaInstagram /></a>
-                   <a href="#" className="text-gray-700 border-2 border-black p-5 hover:bg-black hover:text-white rounded"><FaLinkedinIn /></a>
-                   {/* </div> */}
-               </div>
+                   <a href="#" className="text-gray-700 border-2 border-black p-5 hover:bg-black hover:text-white rounded"><FaLinkedinIn /></a> 
+                 </div> */}
+
+
+
+                 <div className="contact-icon">
+  <button className="shadow bg-black focus:shadow-outline focus:outline-none text-white font-bold py-4 px-6 rounded" type="button">
+    Get in Touch
+  </button>
+  {/* <div className="flex space-x-8 mt-4 md:mt-0 social-icons"> */}
+  <div className="social-icons">
+    <a href="#" className="text-gray-700 border-2 border-black p-5 hover:bg-black hover:text-white rounded">
+      <FaFacebookF />
+    </a>
+    <a href="#" className="text-gray-700 border-2 border-black p-5 hover:bg-black hover:text-white rounded">
+      <FaTwitter />
+    </a>
+    <a href="#" className="text-gray-700 border-2 border-black p-5 hover:bg-black hover:text-white rounded">
+      <FaInstagram />
+    </a>
+    <a href="#" className="text-gray-700 border-2 border-black p-5 hover:bg-black hover:text-white rounded">
+      <FaLinkedinIn />
+    </a>
+  </div>
+</div> 
+
+
+
+
 
 
                 </form>
