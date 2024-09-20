@@ -53,7 +53,7 @@ const ContactForm: React.FC = () => {
 
                 </form>
                 <div className="flex flex-col justify-center mt-4 p-20 max-sm:p-0">
-                    <h2 className="text-4xl font-bold mb-2">Let's <span className='custom-text-border' >talk</span> for Something special</h2>
+                    <h2 className="text-4xl font-bold mb-2">Let's <span className="custom-text-border" >talk</span> for Something special</h2>
                     <p className="text-gray-700 mb-4">I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.</p>
                     <p className="text-xl font-semibold ">Youremail@gmail.com</p>
                     <p className="text-lg font-semibold">1234567890</p>

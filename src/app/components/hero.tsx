@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
       {/* Left Side - Text */}
       <div className="flex flex-col space-y-4 max-w-lg">
         <h1 className="text-5xl font-normal text-black leading-[1.5] gap-10">
-          Hello I’am <span className="text-black font-bold">Evren Shah.</span> <br />
+          Hello I&apos;am <span className="text-black font-bold">Evren Shah.</span> <br />
           <span className="text-black font-bold">Frontend</span> <span className="text-black custom-text-border">Developer</span>
           <br />
           Based in <span className="text-black font-bold">India.</span>
