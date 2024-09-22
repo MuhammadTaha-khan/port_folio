@@ -20,7 +20,7 @@ const Skills: React.FC = () => {
   return (
     <section className="container mx-auto py-20" id='skills'>
       <h2 className="text-center text-4xl font-light mb-10">
-        My <span className="text-black font-bold">Skills</span>
+        Tech <span className="text-black font-bold">Involved</span>
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 place-items-center lg:grid-cols-5  gap-6 px-20 max-sm:p-5 ">
         {skills.map((skill, index) => (

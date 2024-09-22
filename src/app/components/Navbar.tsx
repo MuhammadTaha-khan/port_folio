@@ -7,10 +7,24 @@ import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>('About Me');
+  const [activeSection, setActiveSection] = useState<string>('about');
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleSmoothScroll = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+      });
+      // Set timeout for the 4-second scroll duration
+      setTimeout(() => {
+        setActiveSection(sectionId);
+      }, 4000); // 4 seconds (4000ms)
+    }
   };
 
   useEffect(() => {
@@ -91,7 +105,8 @@ const Navbar: React.FC = () => {
             <li>
               <a
                 href="#about"
-                className={`block py-2 px-3 rounded ${activeSection === 'about' ? 'text-blue-700' : 'text-gray-900'} md:bg-transparent md:p-0 dark:text-white`}
+                onClick={(e) => handleSmoothScroll(e, 'about')}
+                className={`block py-2 px-3 rounded ${activeSection === 'about' ? 'font-bold' : 'text-black'} md:bg-transparent md:p-0 dark:text-white`}
               >
                 About Me
               </a>
@@ -99,7 +114,8 @@ const Navbar: React.FC = () => {
             <li>
               <a
                 href="#skills"
-                className={`block py-2 px-3 rounded ${activeSection === 'skills' ? 'text-blue-700' : 'text-gray-900'} md:bg-transparent md:p-0 dark:text-white`}
+                onClick={(e) => handleSmoothScroll(e, 'skills')}
+                className={`block py-2 px-3 rounded ${activeSection === 'skills' ? 'font-bold' : 'text-black'} md:bg-transparent md:p-0 dark:text-white`}
               >
                 Skills
               </a>
@@ -107,7 +123,8 @@ const Navbar: React.FC = () => {
             <li>
               <a
                 href="#projects"
-                className={`block py-2 px-3 rounded ${activeSection === 'projects' ? 'text-blue-700' : 'text-gray-900'} md:bg-transparent md:p-0 dark:text-white`}
+                onClick={(e) => handleSmoothScroll(e, 'projects')}
+                className={`block py-2 px-3 rounded ${activeSection === 'projects' ? 'font-bold' : 'text-black'} md:bg-transparent md:p-0 dark:text-white`}
               >
                 Projects
               </a>
@@ -115,7 +132,8 @@ const Navbar: React.FC = () => {
             <li>
               <a
                 href="#contact"
-                className={`block py-2 px-3 rounded ${activeSection === 'contact' ? 'text-blue-700' : 'text-gray-900'} md:bg-transparent md:p-0 dark:text-white`}
+                onClick={(e) => handleSmoothScroll(e, 'contact')}
+                className={`block py-2 px-3 rounded ${activeSection === 'contact' ? 'font-bold' : 'text-black'} md:bg-transparent md:p-0 dark:text-white`}
               >
                 Contact Me
               </a>
@@ -149,18 +167,11 @@ export default Navbar;
 
 
 
-
-
-
-
-
-
-
 // "use client";
 // import React, { useState, useEffect } from 'react';
 // import Image from 'next/image';
 // import logo from '../../../public/logo.png';
-// import { FaFileDownload} from 'react-icons/fa';
+// import { FaFileDownload } from 'react-icons/fa';
 // import Link from 'next/link';
 
 // const Navbar: React.FC = () => {
@@ -180,7 +191,7 @@ export default Navbar;
 //     };
 
 //     const observer = new IntersectionObserver((entries) => {
-//       entries.forEach(entry => {
+//       entries.forEach((entry) => {
 //         if (entry.isIntersecting) {
 //           const sectionId = entry.target.getAttribute('id');
 //           if (sectionId) setActiveSection(sectionId);
@@ -188,29 +199,31 @@ export default Navbar;
 //       });
 //     }, observerOptions);
 
-//     sections.forEach(section => observer.observe(section));
+//     sections.forEach((section) => observer.observe(section));
 
 //     return () => {
-//       sections.forEach(section => observer.unobserve(section));
+//       sections.forEach((section) => observer.unobserve(section));
 //     };
 //   }, []);
 
 //   return (
 //     <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
 //       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-//        <a href='#' className="flex items-center space-x-2">
-//          <Image src={logo} alt="Logo" width={32} height={32} />
-//          <span className="text-xl font-bold">Personal</span>
-//        </a>
-
+//         <a href="#" className="flex items-center space-x-2">
+//           <Image src={logo} alt="Logo" width={32} height={32} />
+//           <span className="text-xl font-bold">Personal</span>
+//         </a>
 
 //         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-//        <div className="hidden md:flex bg-black text-white px-4 py-2 rounded-md items-center space-x-2">
-//         <Link href="/resume.pdf" download className="flex items-center space-x-2">
-//            <span>Resume</span>
-//            <FaFileDownload />
-//          </Link>
-//        </div>
+//           {/* This div will show on larger screens */}
+//           <div className="hidden md:flex bg-black text-white px-4 py-2 rounded-md items-center space-x-2">
+//             <Link href="/resume.pdf" download className="flex items-center space-x-2">
+//               <span>Resume</span>
+//               <FaFileDownload />
+//             </Link>
+//           </div>
+
+//           {/* Menu button */}
 //           <button
 //             data-collapse-toggle="navbar-sticky"
 //             type="button"
@@ -237,6 +250,8 @@ export default Navbar;
 //             </svg>
 //           </button>
 //         </div>
+
+//         {/* Navbar items */}
 //         <div
 //           className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${isMenuOpen ? 'block' : 'hidden'}`}
 //           id="navbar-sticky"
@@ -245,7 +260,7 @@ export default Navbar;
 //             <li>
 //               <a
 //                 href="#about"
-//                 className={`block py-2 px-3 rounded ${activeSection === 'about' ? 'text-blue-700' : 'text-gray-900'} md:bg-transparent md:p-0 dark:text-white`}
+//                 className={`block py-2 px-3 rounded ${activeSection === 'about' ? 'font-bold' : 'text-black'} md:bg-transparent md:p-0 dark:text-white`}
 //               >
 //                 About Me
 //               </a>
@@ -253,7 +268,7 @@ export default Navbar;
 //             <li>
 //               <a
 //                 href="#skills"
-//                 className={`block py-2 px-3 rounded ${activeSection === 'skills' ? 'text-blue-700' : 'text-gray-900'} md:bg-transparent md:p-0 dark:text-white`}
+//                 className={`block py-2 px-3 rounded ${activeSection === 'skills' ? 'font-bold' : 'text-black'} md:bg-transparent md:p-0 dark:text-white`}
 //               >
 //                 Skills
 //               </a>
@@ -261,7 +276,7 @@ export default Navbar;
 //             <li>
 //               <a
 //                 href="#projects"
-//                 className={`block py-2 px-3 rounded ${activeSection === 'projects' ? 'text-blue-700' : 'text-gray-900'} md:bg-transparent md:p-0 dark:text-white`}
+//                 className={`block py-2 px-3 rounded ${activeSection === 'projects' ? 'font-bold' : 'text-black'} md:bg-transparent md:p-0 dark:text-white`}
 //               >
 //                 Projects
 //               </a>
@@ -269,10 +284,21 @@ export default Navbar;
 //             <li>
 //               <a
 //                 href="#contact"
-//                 className={`block py-2 px-3 rounded ${activeSection === 'contact' ? 'text-blue-700' : 'text-gray-900'} md:bg-transparent md:p-0 dark:text-white`}
+//                 className={`block py-2 px-3 rounded ${activeSection === 'contact' ? 'font-bold' : 'text-black'} md:bg-transparent md:p-0 dark:text-white`}
 //               >
 //                 Contact Me
 //               </a>
+//             </li>
+//             {/* This resume link will show in the menu when the screen is less than 768px */}
+//             <li className="md:hidden ">
+//               <Link
+//                 href="/resume.pdf"
+//                 download
+//                 className="block  bg-black text-white px-4 py-4 rounded-md items-center space-x-2 w-40"
+//               >
+//                 <span>Resume</span>
+//                 <FaFileDownload className="inline ml-2" />
+//               </Link>
 //             </li>
 //           </ul>
 //         </div>
