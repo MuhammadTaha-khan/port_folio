@@ -1,7 +1,7 @@
 // Mark the component as a Client Component
 "use client";
 
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 
 interface VideoTutorialProps {
   videoSrc: string;
