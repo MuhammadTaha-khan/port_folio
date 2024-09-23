@@ -4,7 +4,7 @@ const desc:React.FC = () => {
     return(
         <div>
             <div className='flex flex-col text-start mx-20 mt-20 '>
-                <h1 className='text-4xl font-bold mb-10'>Project Title</h1>
+                <h1 className='text-4xl font-bold mb-10'>Second Title</h1>
                 <h1 className='text-4xl font-bold mb-10'>Period Covered:</h1>
                 {/* <h1 className='text-4xl font-bold mb-10'>Period Covered: <span className='text-4xl font-normal'>From</span> <span className='font-semibold'>01.10.2013 </span> <span className='text-4xl font-normal'>To</span> <span className='font-semibold'> 01.10.2017 </span></h1> */}
                 <h1 className='text-3xl mb-4'>Project Description</h1>
@@ -21,7 +21,6 @@ const desc:React.FC = () => {
                 Eligendi facilis sequi doloremque corporis amet laborum repudiandae, asperiores, quas voluptatum, earum quos enim? Dicta eius est sequi at vero molestiae natus, omnis mollitia quibusdam esse aut exercitationem? Ab, nostrum.
                 Dolores laboriosam vitae corrupti voluptatem debitis provident aliquam, beatae animi eos hic suscipit deleniti ea quibusdam, inventore magni itaque blanditiis minima nihil nisi eius, illo id fuga aperiam. Libero, quos!
                 Nisi corrupti ab odit temporibus sint quaerat error dolore magnam in explicabo omnis tenetur inventore, ex quo numquam, corporis sed id aliquam optio aliquid quae aut cupiditate distinctio. Ipsam, itaque!.</p>
-
             </div>
         </div>
     );
