@@ -5,7 +5,7 @@ import Hero from './components/hero';
 import ProjectSection from './components/Myprojects';
 import Skills from './components/Skills';
 import Testimonials from './components/Testimonial';
-import Vediosr from './components/Vediosr'; 
+// import Vediosr from './components/Vediosr'; 
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
 
       <Hero /> 
       <Skills/>
-      <Vediosr/>
+      {/* <Vediosr/> */}
       <Experience/>
       <AboutMe/>
       <Testimonials/>
