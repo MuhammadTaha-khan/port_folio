@@ -32,11 +32,11 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   };
 
   return (
-    <div className={`flex justify-center items-center`}>
+    <div className={` flex justify-center items-center`}>
       <div className="flex flex-col md:flex-row  text-white p-6 rounded-lg shadow-lg max-w-5xl mx-5 px-5 mb-5 hover:bg-[#27272a] border border-white">
         <div className="md:ml-6 mt-4 md:mt-0">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center justify-center gap-6">
+          <div className="Experience flex justify-between items-center">
+            <div className=" flex items-center justify-center gap-6">
               {renderIcon()} 
               <h3 className="text-xl font-bold">
                 {title} at {company}
@@ -55,7 +55,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 
 const Experience: React.FC = () => {
   return (
-    <section className="bg-black text-white py-12 px-6 ">
+    <section className="bg-black text-white py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
       <h2 className="text-4xl font-normal mb-8 text-center">My <span className="text-white font-bold">Experience</span></h2>
       <ExperienceItem
         company="Google"

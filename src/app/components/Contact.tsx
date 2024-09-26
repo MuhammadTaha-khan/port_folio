@@ -8,7 +8,7 @@ const ContactForm: React.FC = () => {
     return (
         <>
         <section id='contact'>
-            <div className="flex flex-row max-sm:flex-wrap justify-between items-start p-10 pt-20 bg-white  rounded-lg">
+            <div className="flex flex-row max-sm:flex-wrap justify-between items-start p-10 pt-10 bg-white  rounded-lg">
                 <form className="w-full max-w-lg">
                     <div className="flex flex-wrap -mx-3 mb-6">
                         <div className="w-full px-3 mb-6 md:mb-0">

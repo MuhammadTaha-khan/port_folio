@@ -18,7 +18,7 @@ const skills = [
 
 const Skills: React.FC = () => {
   return (
-    <section className="container mx-auto py-20" id='skills'>
+    <section className="container mx-auto py-16" id='skills'>
       <h2 className="text-center text-4xl font-light mb-10">
         Tech <span className="text-black font-bold">Involved</span>
       </h2>

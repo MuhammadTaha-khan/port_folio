@@ -47,8 +47,8 @@ const ProjectSection = () => {
         {projects.map((project, index) => (
           <div
             key={project.id}
-            className={`flex flex-col gap-10 ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-              } items-center mb-12 lg:mb-14`}
+            className={`myproject flex flex-col gap-10 ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+              } items-center mb-12 lg:mb-14` }
           >
             <div className="lg:w-1/2 mb-6 lg:mb-0">
               <Image

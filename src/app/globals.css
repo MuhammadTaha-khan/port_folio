@@ -43,3 +43,19 @@
     }
   }
   
+  @media (max-width: 768px){
+  .Experience{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px){
+.myproject{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+}
