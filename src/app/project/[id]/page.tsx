@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactInstance, useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import Vediosr from "../../components/Vediosr";
 import Techinv from "../../components/Techinv";
 import firstProject from "../../../../public/project-images/projimg1.png";
@@ -38,7 +38,7 @@ const projects: Project[] = [
   },
 ];
 
-const desc: React.FC = (req: any) => {
+const Desc: React.FC = (req: any) => {
   const defaultProjectdetailsValue = {
     id: 0,
     title: "",
@@ -82,4 +82,4 @@ const desc: React.FC = (req: any) => {
     </div>
   );
 };
-export default desc;
+export default Desc;
